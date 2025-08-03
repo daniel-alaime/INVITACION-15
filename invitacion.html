@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Invitación a los 15</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("fondo.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .contenedor {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1.1em;
+      line-height: 1.4;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e0559e;
+    }
+
+    .foto-principal {
+      width: 250px;
+      max-width: 90vw;
+      height: auto;
+      border-radius: 20px;
+      border: 3px solid white;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+      margin: 0 auto 20px auto;
+      display: block;
+    }
+
+    .detalle {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 1.6em;
+      color: #ffe4f3;
+      margin-top: 20px;
+    }
+
+    .mi-cuadro {
+      background-color: rgba(255, 255, 255, 0.3);
+      border: 2px solid white;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 25px;
+      color: #111;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 1.4em;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+
+    /* Estilos para iconos dress code */
+    .mi-cuadro.dress-code {
+      background: linear-gradient(135deg, #7cb342, #fdd835);
+      color: #2e3a2e;
+      font-weight: 700;
+      padding: 25px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      margin-top: 25px;
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 15px;
+    }
+
+    .tuxedo {
+      width: 50px;
+      height: 70px;
+      background: black;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    .tuxedo::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 6px;
+      width: 38px;
+      height: 50px;
+      background: white;
+      clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+    }
+
+    .bowtie {
+      position: absolute;
+      top: 12px;
+      left: 15px;
+      width: 20px;
+      height: 8px;
+      background: black;
+      clip-path: polygon(0 50%, 20% 0, 20% 40%, 80% 40%, 80% 0, 100% 50%, 80% 100%, 80% 60%, 20% 60%, 20% 100%);
+    }
+
+    .dress {
+      width: 40px;
+      height: 70px;
+      background: black;
+      clip-path: polygon(50% 0, 70% 15%, 60% 30%, 70% 60%, 80% 90%, 20% 90%, 30% 60%, 40% 30%, 30% 15%);
+      position: relative;
+    }
+
+    .belt {
+      position: absolute;
+      top: 30px;
+      left: 11px;
+      width: 14px;
+      height: 5px;
+      background: white;
+      clip-path: polygon(0 50%, 25% 0, 25% 40%, 75% 40%, 75% 0, 100% 50%, 75% 100%, 75% 60%, 25% 60%, 25% 100%);
+    }
+
+    /* Estilo para el contador */
+    #contador {
+      color: white;
+      font-weight: 700;
+      font-size: 1.5em;
+      background-color: rgba(255, 105, 180, 0.7);
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      font-family: 'Brush Script MT', cursive;
+    }
+  </style>
+</head>
+<body onclick="iniciarMusica()">
+  <div class="contenedor">
+    <img src="foto colo.jpg" alt="Foto de la cumpleañera" class="foto-principal">
+
+    <button onclick="document.getElementById('audio').play()">🎶 Reproducir música</button>
+
+    <div class="mi-cuadro">
+      <h1>¡Te invito a mis 15!</h1>
+      <p>Mi noche soñada está por comenzar ✨</p>
+      <p>📍 Salón “COMPLEJO NOW DISCO”<br>📅 05 de Septiembre<br>🕘 22:00 hs</p>
+    </div>
+
+    <div class="mi-cuadro">
+      <p>Te invito a mi cumpleaños</p>
+      <p>05 de Septiembre - Viernes - 22:00 hs</p>
+      <p>En: Salón “Complejo Now Disco”</p>
+    </div>
+
+    <div class="mi-cuadro dress-code" style="background: linear-gradient(135deg, #7cb342, #fdd835); color: #2e3a2e; font-weight: 700; padding: 25px 20px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.3); margin-top: 25px; text-align:center;">
+      <div style="margin-bottom: 15px;">
+        <img src="dresscode.png" alt="Dress code elegante" style="width: 140px; height: auto;">
+      </div>
+      <p style="font-size:1.3em; margin:0 0 8px 0;"><strong>Vestimenta:</strong> ELEGANTE</p>
+      <p style="margin:0; font-size:1.1em; color:#2e3a2e;"><em>Colores reservados:</em> verde, dorado</p>
+    </div>
+
+    <p class="detalle">¡Te espero!</p>
+
+    <div style="margin-top: 20px;">
+      <button onclick="window.open('https://wa.me/543876543210?text=Hola!%20Quisiera%20confirmar%20mi%20asistencia%20a%20la%20fiesta', '_blank')">💬 Confirmar por WhatsApp</button>
+      <br><br>
+      <button onclick="window.open('https://maps.app.goo.gl/u6CDX46NVPxMNPxJ7', '_blank')">📍 Ver ubicación en Maps</button>
+    </div>
+
+    <!-- Contador abajo -->
+    <div id="contador">Calculando días para la fiesta...</div>
+
+  </div>
+
+  <audio id="audio" src="musica.mp3" loop></audio>
+  <script>
+    let iniciado = false;
+    function iniciarMusica() {
+      if (!iniciado) {
+        document.getElementById('audio').play();
+        iniciado = true;
+      }
+    }
+
+    // Contador regresivo
+    function actualizarContador() {
+      const evento = new Date('September 5, 2025 22:00:00').getTime();
+      const ahora = new Date().getTime();
+      const diferencia = evento - ahora;
+
+      if (diferencia <= 0) {
+        document.getElementById('contador').innerHTML = "¡La fiesta ya comenzó!";
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+      document.getElementById('contador').innerHTML =
+        `Faltan ${dias} días, ${horas} hs, ${minutos} min y ${segundos} seg para la fiesta`;
+    }
+
+    setInterval(actualizarContador, 1000);
+    actualizarContador();
+  </script>
+</body>
+</html>
